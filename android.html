@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="andriod" style="border: 1px solid #eee;background: url(./bg.jpg)" height="450px" width="450px">
+		您的浏览器不支持html5,建议升级！
+	</canvas>	
+</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("andriod");
+		var context = canvas.getContext("2d");
+		context.fillStyle = "#a4ca39";
+		context.strokeStyle = "#a4ca39";
+
+		context.beginPath();
+		context.moveTo(115,150);
+		context.bezierCurveTo(115,15,335,15,335,150);
+		context.fill();
+		context.stroke();
+
+		context.fillStyle = "#ffffff";
+		context.beginPath();
+		context.arc(175,100,10,0,2*Math.PI,false);
+		context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.arc(265,100,10,0,2*Math.PI,false);
+		context.fill();
+		context.stroke();	
+
+		context.beginPath();
+		context.moveTo(225,140);
+		context.lineTo(155,20);
+		context.lineWidth = 5;	
+		context.lineCap = "round";
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(225,140);
+		context.lineTo(295,20);
+		context.lineWidth = 5;
+		context.lineCap = "round";
+		context.stroke();
+
+		context.fillStyle = "#a4ca39";
+		context.beginPath();
+		context.moveTo(115,155);
+		context.lineTo(335,155);
+		context.lineTo(335,315);
+		context.arcTo(335,340,310,340,25);
+		context.lineTo(140,340);
+		context.arcTo(115,340,115,315,25);
+		context.lineTo(115,155);
+		context.fill();
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(80,180);
+		context.lineTo(80,300);
+		context.lineWidth = 50;
+		context.lineCap = "round";
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(370,180);
+		context.lineTo(370,300);
+		context.lineWidth = 50;
+		context.lineCap = "round";
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(185,340);
+		context.lineTo(185,400);
+		context.lineWidth = 50;
+		context.lineCap = "round";
+		context.stroke();
+
+		context.beginPath();
+		context.moveTo(265,340);
+		context.lineTo(265,400);
+		context.lineWidth = 50;
+		context.lineCap = "round";
+		context.stroke();
+	</script>
+</html>
