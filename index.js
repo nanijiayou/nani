@@ -187,16 +187,9 @@ window.onload = function(){
 	//y有点问题，后面再来解决					
 	for(var i=0; i<oImg.length; i++){
 		oImg[i].onmouseover = function(){
-			var alpha =0;
 			var img = new Image();	
 			img.src = oImg[0].src = this.src;
 			oImg[0].style.opacity = 0;
-			tmer = setInterval(function(){
-				alpha += 2;	
-				alpha > 100 && (alpha = 100);
-				oImg[0].style.opacity = alpha /100;
-				alpha == 100 && clearInterval(tmer);
-			},20)
 			oDiv.style.display = "block";
 			img.complete ? oDiv.style.display="none" : (oImg[0].onload = function(){oDiv.style.display = "none"});
 		}	
